@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AudienceMaster.master.cs" Inherits="YokyoOlympicGames.Audience.AudienceMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="~/css/style.css" type="text/css" rel="stylesheet" />
+    <title>Welcome to Yokyo Games</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 1157px;
+            height: 374px;
+        }
+    </style>
+</head>
+<body>
+   <form id="form1" runat="server">
+        <div class="banner">
+           <div class="banner-left">
+               <img src="../images/download.png" height="150" width="150"/>
+           </div><!--end of banner-left-->
+            <div class="banner-right">
+                <ul>
+                    <li><a href="#">PROFILE</a></li>
+                    <li><a href="gameDetails.aspx">GAMES</a></li>
+                    <li><a href="gameTypeDetails.aspx">GAME TYPES</a></li>
+                    <li><a href="broadCastDetails.aspx">BROAD CAST</a></li>
+                    <li><a href="Booking.aspx">BOOKING DETAILS</a></li>
+                     <li><a href="../home.html">SIGN OUT</a></li>
+                </ul>
+            </div><!--end of banner-right-->
+        </div><!--end of banner-->
+       <div style="text-align:center;color:green;clear:both;"><h3 style="color: #FF0000" >Welcome:<asp:Label ID="lblUserName" runat="server" Text=""></asp:Label>
+           <span style="margin-left:10px; color: #FF0000;">Customer Id:</span><asp:Label ID="lblCustomerID" runat="server" Text=""></asp:Label>
+                                                              </h3></div>
+        <div class="mainContent">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    
+</body>
+</html>
